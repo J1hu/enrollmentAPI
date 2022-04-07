@@ -8,7 +8,7 @@ use App\Models\Course;
 
 class CourseController extends Controller
 {
-    public function index(Request $request) {
+    public function get(Request $request) {
         $courses = Course::get();
     
         return response()->json(['data' => $courses]);

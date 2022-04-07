@@ -2,6 +2,10 @@
 @section('title','Course')
 @section('formModal')
 <!-- Button trigger modal -->
+<div id="errorMessage" class="alert alert-danger d-none" role="alert">
+      Please enter all the required fields
+</div>
+<div id="testJehu" class="alert alert-danger d-none" role="alert"></div>
 <div class="container">
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -29,20 +33,22 @@
                     <input type="number" class="form-control" id="years" placeholder="Enter the Years">
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="description" id="floatingTextarea"></textarea>
+                    <textarea id = "description" class="form-control" placeholder="description" id="floatingTextarea"></textarea>
                     <label for="floatingTextarea">Description</label>
                 </div>
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 @endsection
 @section('formCourse')
+
+    
 <table class="table">
   <thead>
     <tr>
@@ -63,7 +69,7 @@
             
           </button>
           <button class="btn btn-danger">
-          <i id = "delete" class="fa-solid fa-trash"></i>
+          <i id = "delete"  class="fa-solid fa-trash"></i>
           </button>
       </td>
     </tr>
