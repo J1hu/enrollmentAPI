@@ -1,0 +1,40 @@
+users
+    id
+    firstname
+    lastname
+    type - student || teacher
+    status - active || disabled
+    created_at
+    updated_at
+
+courses
+    id
+    course
+    years
+    description
+    created_at
+    updated_at
+
+subjects
+    id 
+    course_id
+    subject
+    code
+    units
+    description
+    created_at
+    updated_at
+
+school_years
+    id
+    start - date
+    end - date
+
+enrolled_users
+    id
+    school_year_id
+    user_id
+    course_id
+    year_level
+    created_at
+    updated_at
