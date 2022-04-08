@@ -25,21 +25,21 @@
             <div>
                 <div class="mb-3">
                     <label for="course" class="form-label">Course</label>
-                    <input type="text" class="form-control" id="course" placeholder="Enter the course name">
+                    <input required type="text" class="form-control" id="course" placeholder="Enter the course name">
                     
                 </div>
                 <div class="mb-3">
                     <label for="years" class="form-label">Years</label>
-                    <input type="number" class="form-control" id="years" placeholder="Enter the Years">
+                    <input required type="number" class="form-control" id="years" placeholder="Enter the Years">
                 </div>
                 <div class="form-floating">
-                    <textarea id = "description" class="form-control" placeholder="description" id="floatingTextarea"></textarea>
+                    <textarea id = "description" class="form-control" placeholder="description" ></textarea>
                     <label for="floatingTextarea">Description</label>
                 </div>
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  id="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
       </div>
     </div>
@@ -58,22 +58,8 @@
       <th scope="col"></th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>
-          <button id="edit" class="btn btn-primary">
-            <i class="fa-solid fa-pen"></i>
-            
-          </button>
-          <button class="btn btn-danger">
-          <i id = "delete"  class="fa-solid fa-trash"></i>
-          </button>
-      </td>
-    </tr>
-   
+  <tbody id="courseContent">
+    
   </tbody>
 </table>
 @endsection
